@@ -1,0 +1,11 @@
+applicationName: m-svc-2
+replicaCount: 1
+
+container:
+ image: m-svc-2-image
+ port: 8080
+ imagePullPolicy: IfNotPresent 
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 8080
